@@ -1,0 +1,8 @@
+.venv/
+
+*.egg-info/
+
+.DS_Store
+
+# Local ad-hoc testing — never commit
+TESTING/

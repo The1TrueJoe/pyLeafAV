@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "leafav"
+version = "0.1.0"
+description = "Python library and tools to control Leaf HDMI matrix switches"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+keywords = ["hdmi", "matrix", "av", "leaf", "control"]
+dependencies = [
+    "dearpygui>=1.10",
+]
+
+[project.scripts]
+leafav     = "leafav.cli:main"
+leafav-gui = "leafav.gui:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["leafav*"]
