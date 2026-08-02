@@ -6,12 +6,12 @@ over TCP (port 8105).
 ## Supported models
 
 | Model    | Video inputs | Video outputs | Audio outputs | Verified |
-|----------|-------------|--------------|--------------|---------|
-| LU642    | 6           | 6            | 8 analogue   |         |
-| LU642L   | 6           | 6            | —            |         |
-| LU862    | 8           | 8            | 8 analogue   | ✅       |
-| LU862D   | 8           | 8            | 8 analogue   |         |
-| LU1082   | 10          | 10           | 8 analogue   |         |
+|----------|-------------|--------------|------------|---------|
+| LU642    | 6           | 6            | 8 analog   |         |
+| LU642L   | 6           | 6            | —          |         |
+| LU862    | 8           | 8            | 8 analog   | ✅      |
+| LU862D   | 8           | 8            | 8 analog   |         |
+| LU1082   | 10          | 10           | 8 analog   |         |
 
 All models share the same TCP protocol; only the input/output counts differ.
 The LU862 is the only currently verified model — bug reports and test
@@ -123,6 +123,3 @@ asyncio.run(main())
 - Inputs are 1-indexed on the wire (`Input 1 → 0x01`)
 - Outputs are 0-indexed on the wire (`Output 1 → 0x00`)
 - Volume: linear mapping, C4 range 0-100 → device range 0x00-0xFF
-
-The protocol was reverse-engineered from the official Control4 DriverWorks
-drivers in `driver-ref/`.
